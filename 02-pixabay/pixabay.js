@@ -1,16 +1,30 @@
 'use strict';
 
-const searchImages = async (text)=> {
+const searchImages = async (text) => {
     const key = '12180485-63058e50c2824559402449f76';
     const url = `https://pixabay.com/api/?key=${key}&q=${text}`;
-    const response = await fetch(url)
+    const response = await fetch(url);
     return response.json();
-}
+};
+
+const createCard = ({webformatURL}) => {
+    const card = document.createElement('div');
+    card.classList.add('card-container');
+    card.innerHTML = `
+        <a href="#" class="card-image">
+            <img src=${webformatURL} >
+        </a>
+    `;
+    return card;
+};
 
 const loadGallery = async (text) => {
-    const imagesInfo = await searchImages (text); 
-    console.log (imagesInfo);
-}
+    const container = document.querySelector('.container-gallery');
+    const {hits} = await searchImages(text);
+    const cards = hits.map(createCard);
+    container.replaceChildren(...cards);
+    console.log(cards);
+};
 
 const handleKeypress = ({key, target}) => {
     if (key === 'Enter') {
@@ -18,5 +32,4 @@ const handleKeypress = ({key, target}) => {
     }
 };
 
-document.querySelector('#search-input')
-        .addEventListener('keypress', handleKeypress);
+document.querySelector('#search-input').addEventListener('keypress', handleKeypress);
