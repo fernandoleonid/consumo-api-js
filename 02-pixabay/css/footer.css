@@ -1,0 +1,39 @@
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #111;
+    gap: 20px;
+    padding: 20px;
+    margin-top: 6px;
+    height: 100px;
+}
+
+footer .social {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+}
+footer a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #333;
+    transition: all 0.5s;
+}
+
+footer a:hover {
+    background-color: #f2cb05;
+    color: #000;
+}
+
+footer .text {
+    color: #fff;
+    font-style: italic;
+}

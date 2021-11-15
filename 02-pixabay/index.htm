@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://kit.fontawesome.com/324b71f187.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="./css/reset.css" />
+        <link rel="stylesheet" href="./css/style.css" />
+        <link rel="stylesheet" href="./css/header.css" />
+        <link rel="stylesheet" href="./css/search.css" />
+        <link rel="stylesheet" href="./css/pagination.css" />
+        <link rel="stylesheet" href="./css/footer.css" />
+        <script src="./pixabay.js" defer></script>
+        <title>API - Pixabay</title>
+    </head>
+    <body>
+        <header>
+            <div class="logo"></div>
+            <div class="search-container">
+                <label class="search-icon" for="search-input"></label>
+                <input
+                    type="text"
+                    class="search-input"
+                    id="search-input"
+                    placeholder="Search images,vectors & videos"
+                />
+            </div>
+            <div class="pagination">
+                <input type="text" class="page" value="1" />
+                <span class="page-total"></span>
+                <div class="page-action" id="page-previous">&#11164;</div>
+                <div class="page-action" id="page-next">&#11166;</div>
+            </div>
+        </header>
+        <main>
+            <section class="container-gallery"></section>
+        </main>
+        <footer>
+            <ul class="social">
+                <li>
+                    <a href="https://github.com/fernandoleonid"><i class="fab fa-github"></i></a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/fernandoleonid/"><i class="fab fa-linkedin-in"></i></a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/fernandoleonid"><i class="fab fa-youtube"></i></a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/fernandoleonid/"><i class="fab fa-instagram"></i></a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/fernandoleonid"><i class="fab fa-twitter"></i></a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/fernandoleonid/"><i class="fab fa-facebook-f"></i></a>
+                </li>
+            </ul>
+            <div class="text">Copyright 2021 © | Fernando Leonid</div>
+        </footer>
+    </body>
+</html>
