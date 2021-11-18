@@ -43,12 +43,16 @@ const createCard = ({webformatURL, pageURL, tags, likes, comments}) => {
     return card;
 };
 
-const loadGallery = async (text) => {
+const loadGallery = async (text, page = 1) => {
     const container = document.querySelector('.container-gallery');
-    const {hits} = await searchImages(text);
+    const {hits, totalHits} = await searchImages(`${text}&page=${page}`);
     const cards = hits.map(createCard);
     container.replaceChildren(...cards);
+
+    const totaPages = Math.ceil(totalHits / 20);
+    document.querySelector('#page-total').textContent = `/ ${totaPages}`;
     document.querySelector('#search-input').value = text;
+    document.querySelector('#page').value = page;
 };
 
 const handleKeypress = ({key, target}) => {
@@ -57,4 +61,33 @@ const handleKeypress = ({key, target}) => {
     }
 };
 
+const handlePage = ({key, target}) => {
+    const text = document.querySelector('#search-input').value;
+    if (key === 'Enter') {
+        loadGallery(text, target.value);
+    }
+};
+
+const handleNext = () => {
+    let page = Number(document.querySelector('#page').value);
+    const totalPages = Number(document.querySelector('#page-total').textContent.replace('/', ''));
+    const text = document.querySelector('#search-input').value;
+    if (page < totalPages) {
+        page++;
+        loadGallery(text, page);
+    }
+};
+
+const handlePrevious = () => {
+    let page = Number(document.querySelector('#page').value);
+    const text = document.querySelector('#search-input').value;
+    if (page > 1) {
+        page--;
+        loadGallery(text, page);
+    }
+};
+
 document.querySelector('#search-input').addEventListener('keypress', handleKeypress);
+document.querySelector('#page').addEventListener('keypress', handlePage);
+document.querySelector('#page-next').addEventListener('click', handleNext);
+document.querySelector('#page-previous').addEventListener('click', handlePrevious);
