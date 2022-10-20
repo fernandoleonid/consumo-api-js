@@ -1,4 +1,14 @@
 # Consumo de API usando Javascript Puro
 
-1.  [ViaCep](https://fernandoleonid.github.io/consumo-api-js/01-viacep/)
-2.  [Pixabay](https://fernandoleonid.github.io/consumo-api-js/02-pixabay/)
+| #  | API | Projeto | Vídeo aula |
+| -- | --- | ---------- | ---------- |
+| 1. | [ViaCep][viacep-api] | [ViaCep][viacep-projeto]  | ![][viacep-img] |
+| 1. | [ViaCep][viacep-api] | [ViaCep][viacep-projeto]  | ![][viacep-img] |
+
+
+
+[viacep-api]: https://viacep.com.br/
+[viacep-projeto]: https://fernandoleonid.github.io/consumo-api-js/01-viacep/
+[viacep-img]: ./screenshot/viacep.png
+
+[pixabay-img]: https://fernandoleonid.github.io/consumo-api-js/02-pixabay/
