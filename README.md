@@ -1,9 +1,9 @@
 # Consumo de API usando Javascript Puro
 
-| #  | API | Projeto | Vídeo aula |
-| -- | --- | ---------- | ---------- |
-| 1. | [ViaCep][viacep-api] | [Cadastro][viacep-projeto]  | [![][viacep-img]][viacep-video] |
-| 2. | [Pixabay][pixabay-api] | [Pesquisa][pixabay-projeto]  | [![][pixabay-img]][pixabay-video] |
+| #  | Desafio | API | Projeto |Vídeo aula |
+| --- | ------ | ---------- | ---------- | ---------- |
+| 1. | Consumir uma API de CEP e preencher um formulário como as informações do endereço. Clique | [ViaCEP][viacep-api] | [Cadastro][viacep-projeto] | [![][viacep-img]][viacep-video] |
+| 2. | Consumir uma API de imagens e criar uma pesquisa de imagens retornando uma galeria |[Pixabay][pixabay-api] |[Pesquisa de imagens][pixabay-projeto] | [![][pixabay-img]][pixabay-video] |
 
 
 [viacep-api]: https://viacep.com.br/
