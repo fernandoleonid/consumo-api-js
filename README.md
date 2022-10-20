@@ -6,13 +6,12 @@
 | 2. | [Pixabay][pixabay-api] | [Pesquisa][pixabay-projeto]  | [![][pixabay-img]][pixabay-video] |
 
 
-
 [viacep-api]: https://viacep.com.br/
 [viacep-projeto]: https://fernandoleonid.github.io/consumo-api-js/01-viacep/
 [viacep-video]: https://youtu.be/imk6Y0viabg
-[viacep-img]: ./screenshot/viacep.png
+[viacep-img]: ./screenshot/viacep-480.png
 
 [pixabay-api]: https://pixabay.com/api/docs/
 [pixabay-projeto]: https://fernandoleonid.github.io/consumo-api-js/02-pixabay/
 [pixabay-video]: https://youtu.be/pRic1B2Qdgk
-[pixabay-img]: ./screenshot/pixabay.png
+[pixabay-img]: ./screenshot/pixabay-480.png
