@@ -20,8 +20,9 @@ Para isso criamos um formulário de cadastro, que preenche automaticamente os ca
  - FETCH
  - ASYNC / AWAIT
  - REGEX
+ - [VIACEP](https://viacep.com.br/)
 
  ---
  ## Autor
 
- - [Fernando Leonid](https://github.com/fernandoleonid/)
+[![](https://avatars.githubusercontent.com/u/42476943?v=4&s=100)](https://github.com/fernandoleonid)
