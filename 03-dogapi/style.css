@@ -1,0 +1,29 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.image-container {
+    height: 100vh;
+    background-color: black;
+}
+
+#dog-image{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+#breed-name{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 900;
+    text-align: center;
+    font-size: 4vw;
+    text-transform: uppercase;
+    -webkit-text-stroke: 2px yellow;
+}
