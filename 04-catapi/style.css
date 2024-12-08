@@ -1,0 +1,31 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    padding: 16px;
+    background-color: black;
+}
+
+.gallery{
+    columns: 3;
+    column-gap: 0;
+}
+
+.gallery img {
+    width: 100%;
+    padding: 8px;
+}
+
+@media (max-width: 1024px) {
+    .gallery{
+        columns: 2;
+    }
+}
+@media (max-width: 768px) {
+    .gallery{
+        columns: 1;
+    }
+}
