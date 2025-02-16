@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/324b71f187.js" crossorigin="anonymous"></script>
+    <script src="./weatherapi.js" defer></script>
+    <title>Weather API</title>
+</head>
+<body>
+    <main>
+        <div class="weather-card">
+            <label >
+                <i class="fas fa-map-marker-alt"></i>
+                <input id="weather-search" class="weather-search" placeholder="Nome da Cidade">
+            </label>
+            <img id="weather-image" class="weather-image" src="https://openweathermap.org/img/wn/11d@4x.png" alt="Imagem do clima">
+            <div id="weather-temperature" class="weather-temperature">0 ° C</div>
+            <div id="weather-city" class="weather-city">Cidade</div>
+            <div class="weather-details">
+                <div class="detail">
+                    <i class="fas fa-water"></i>
+                    <span>
+                        <p id="humidity" class="detail-text">100%</p>
+                        <p>Humidade</p>
+                    </span>
+                </div>
+                <div class="detail">
+                    <i class="fas fa-wind"></i>
+                    <span>
+                        <p id="wind"  class="detail-text">23 KM/h</p>
+                        <p>Vento</p>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
