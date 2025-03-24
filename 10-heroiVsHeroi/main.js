@@ -58,7 +58,35 @@ async function mostrarSugestoes({target}) {
     
 }
 
+function atualizarGrafico() {
+    if (!dadosHeroi1 || !dadosHeroi2) {
+        alert ('Por favor, selecione os dois  heróes antes de comparar!')
+        return
+    }
+    const estatistica1 = Object.values(dadosHeroi1.powerstats).join(',')
+    const estatistica2 = Object.values(dadosHeroi2.powerstats).join(',')
+    const url = 'https://image-charts.com/chart'
+    const type = 'bhg'
+    const size = '600x320'
+    const data = `${estatistica1}|${estatistica2}`
+    const colors = 'FFC107,2196F3'
+    const bgColor = 'bg,s,212121'
+    const axis = 'x,y'
+    const axisStyle = '0,FFFFFF,12|1,FFFFFF,12'
+    const labels = `1:|${Object.keys(dadosHeroi1.powerstats).join('|')}`
+
+    const urlGrafico = `${url}?cht=${type}&chs=${size}&chd=t:${data}&chco=${colors}&chf=${bgColor}&chxt=${axis}&chxs=${axisStyle}&chxl=${labels}`
+
+    const imagemGrafico = document.getElementById('chart')
+    imagemGrafico.src = urlGrafico
+    imagemGrafico.classList.add('active')
+
+    console.log (urlGrafico)
+}
+
 document.getElementById('hero1-input')
         .addEventListener('input', mostrarSugestoes)
 document.getElementById('hero2-input')
         .addEventListener('input', mostrarSugestoes)
+document.getElementById('compare-button')
+        .addEventListener('click', atualizarGrafico)

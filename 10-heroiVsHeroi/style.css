@@ -108,3 +108,6 @@ button {
     visibility: hidden;
 }
 
+.chart.active{
+    visibility: visible;
+}
