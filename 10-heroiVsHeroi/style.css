@@ -23,7 +23,7 @@ body {
     align-items: center;
 }
 
-h1 {
+h1, h2 {
     margin: 10px 0;
 }
 
@@ -96,6 +96,12 @@ button {
 
 .card.hero2 {
     background-color: var(--secondary-color);
+}
+
+.card img {
+    max-width: 100%;
+    border-radius: 4px;
+    box-shadow: 4px 4px 16px #000;
 }
 
 .chart {

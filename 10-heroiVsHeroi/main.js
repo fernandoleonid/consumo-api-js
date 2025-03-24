@@ -14,13 +14,25 @@ async function buscarSugestoes (nomeHeroi) {
 
 }
 
+function atualizarCard({number, name, image}){
+    const card = document.getElementById(`card${number}`)
+    const titulo = document.createElement('h2')
+    titulo.textContent = name
+    const imagem = document.createElement('img')
+    imagem.src = image.url
+    card.replaceChildren(titulo, imagem)
+}
+
 function selecionarHeroi(heroi, target) {
     if (target.id == 'hero1-input') {
+        heroi.number = 1
         dadosHeroi1 = heroi
     }else {
+        heroi.number = 2
         dadosHeroi2 = heroi
     }
     target.value = heroi.name
+    atualizarCard(heroi)
     target.parentNode.querySelector('.suggestions').remove()
 }
 
@@ -43,8 +55,6 @@ async function mostrarSugestoes({target}) {
         itemSugestao.onclick = () => selecionarHeroi(heroi, target)
         divSugestoes.appendChild(itemSugestao)
     })
-    
-    console.log(listaSugestoes);
     
 }
 
